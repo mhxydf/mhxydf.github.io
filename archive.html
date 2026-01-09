@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>归档 - 我的博客</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/blog.js" defer></script>
 </head>
 <body>
     <nav>
@@ -27,37 +28,10 @@
     </header>
     
     <main class="container">
-        <div class="archive-list">
-            <div class="archive-item">
-                <h3><a href="posts/getting-started-with-github-pages.html">GitHub Pages 入门指南</a></h3>
-                <div class="archive-meta">
-                    <span>2024年1月15日</span> | 
-                    <span>技术</span>
-                </div>
-            </div>
-            
-            <div class="archive-item">
-                <h3><a href="posts/css-flexbox-guide.html">CSS Flexbox 完全指南</a></h3>
-                <div class="archive-meta">
-                    <span>2024年1月10日</span> | 
-                    <span>前端</span>
-                </div>
-            </div>
-            
-            <div class="archive-item">
-                <h3><a href="posts/new-year-resolutions.html">2024新年计划</a></h3>
-                <div class="archive-meta">
-                    <span>2024年1月5日</span> | 
-                    <span>生活</span>
-                </div>
-            </div>
-            
-            <div class="archive-item">
-                <h3><a href="posts/static-site-generators.html">静态网站生成器对比</a></h3>
-                <div class="archive-meta">
-                    <span>2023年12月28日</span> | 
-                    <span>技术</span>
-                </div>
+        <div class="archive-list" id="archive-list">
+            <!-- 文章列表将通过JavaScript自动加载 -->
+            <div style="text-align: center; padding: 40px; color: #999;">
+                <p>正在加载文章...</p>
             </div>
         </div>
     </main>

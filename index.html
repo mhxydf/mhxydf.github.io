@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的博客 - 首页</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/blog.js" defer></script>
 </head>
 <body>
     <nav>
@@ -28,62 +29,11 @@
     </header>
     
     <main class="container">
-        <div class="blog-posts">
-            <article class="post-card">
-                <div class="post-meta">
-                    <span class="post-date">2024年1月15日</span>
-                    <span class="post-category">技术</span>
-                </div>
-                <h2 class="post-title">
-                    <a href="posts/getting-started-with-github-pages.html">GitHub Pages 入门指南</a>
-                </h2>
-                <p class="post-excerpt">
-                    学习如何使用GitHub Pages免费托管静态网站。本文将介绍如何创建仓库、配置设置、上传文件，以及如何让您的网站可以在线访问。
-                </p>
-                <a href="posts/getting-started-with-github-pages.html" class="read-more">阅读更多 →</a>
-            </article>
-            
-            <article class="post-card">
-                <div class="post-meta">
-                    <span class="post-date">2024年1月10日</span>
-                    <span class="post-category">前端</span>
-                </div>
-                <h2 class="post-title">
-                    <a href="posts/css-flexbox-guide.html">CSS Flexbox 完全指南</a>
-                </h2>
-                <p class="post-excerpt">
-                    Flexbox是现代CSS布局的强大工具。本文将深入探讨Flexbox的各种属性和用法，帮助您掌握响应式布局的核心技术。
-                </p>
-                <a href="posts/css-flexbox-guide.html" class="read-more">阅读更多 →</a>
-            </article>
-            
-            <article class="post-card">
-                <div class="post-meta">
-                    <span class="post-date">2024年1月5日</span>
-                    <span class="post-category">生活</span>
-                </div>
-                <h2 class="post-title">
-                    <a href="posts/new-year-resolutions.html">2024新年计划</a>
-                </h2>
-                <p class="post-excerpt">
-                    新的一年，新的开始。分享我的2024年目标和计划，包括学习新技术、提升技能、保持健康的生活方式等。
-                </p>
-                <a href="posts/new-year-resolutions.html" class="read-more">阅读更多 →</a>
-            </article>
-            
-            <article class="post-card">
-                <div class="post-meta">
-                    <span class="post-date">2023年12月28日</span>
-                    <span class="post-category">技术</span>
-                </div>
-                <h2 class="post-title">
-                    <a href="posts/static-site-generators.html">静态网站生成器对比</a>
-                </h2>
-                <p class="post-excerpt">
-                    对比Jekyll、Hugo、Gatsby等主流静态网站生成器的优缺点，帮助您选择最适合的工具来构建您的博客或网站。
-                </p>
-                <a href="posts/static-site-generators.html" class="read-more">阅读更多 →</a>
-            </article>
+        <div class="blog-posts" id="blog-posts">
+            <!-- 文章列表将通过JavaScript自动加载 -->
+            <div style="text-align: center; padding: 40px; color: #999;">
+                <p>正在加载文章...</p>
+            </div>
         </div>
     </main>
     
