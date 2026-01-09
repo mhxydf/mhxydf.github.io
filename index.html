@@ -3,185 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页 - 我的网站</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        nav ul li {
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-        
-        nav ul li a:hover {
-            background: #667eea;
-            color: white;
-        }
-        
-        nav ul li a.active {
-            background: #667eea;
-            color: white;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-        }
-        
-        .content {
-            background: white;
-            padding: 60px 20px;
-            margin: 40px auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            max-width: 1000px;
-        }
-        
-        .content h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-        
-        .content p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .feature-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-        
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-    </style>
+    <title>我的博客 - 首页</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
         <div class="container">
-            <ul>
+            <div class="nav-brand">
+                <a href="index.html">我的博客</a>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="about.html">关于我们</a></li>
-                <li><a href="services.html">服务项目</a></li>
-                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="archive.html">归档</a></li>
             </ul>
         </div>
     </nav>
     
-    <div class="hero">
+    <header class="hero">
         <div class="container">
-            <h1>欢迎来到我的网站</h1>
-            <p>探索无限可能，创造美好未来</p>
+            <h1>欢迎来到我的博客</h1>
+            <p>分享技术、生活与思考</p>
         </div>
-    </div>
+    </header>
     
-    <div class="container">
-        <div class="content">
-            <h2>欢迎访问</h2>
-            <p>这是一个现代化的静态网站示例，展示了如何创建多个可以互相跳转的页面。每个页面都包含统一的导航栏，方便用户在不同页面之间切换。</p>
-            <p>您可以通过顶部导航栏访问其他页面，包括关于我们、服务项目和联系我们等页面。</p>
+    <main class="container">
+        <div class="blog-posts">
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date">2024年1月15日</span>
+                    <span class="post-category">技术</span>
+                </div>
+                <h2 class="post-title">
+                    <a href="posts/getting-started-with-github-pages.html">GitHub Pages 入门指南</a>
+                </h2>
+                <p class="post-excerpt">
+                    学习如何使用GitHub Pages免费托管静态网站。本文将介绍如何创建仓库、配置设置、上传文件，以及如何让您的网站可以在线访问。
+                </p>
+                <a href="posts/getting-started-with-github-pages.html" class="read-more">阅读更多 →</a>
+            </article>
             
-            <div class="features">
-                <div class="feature-card">
-                    <h3>响应式设计</h3>
-                    <p>适配各种设备屏幕，提供最佳浏览体验</p>
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date">2024年1月10日</span>
+                    <span class="post-category">前端</span>
                 </div>
-                <div class="feature-card">
-                    <h3>现代化界面</h3>
-                    <p>采用最新的设计趋势，美观大方</p>
+                <h2 class="post-title">
+                    <a href="posts/css-flexbox-guide.html">CSS Flexbox 完全指南</a>
+                </h2>
+                <p class="post-excerpt">
+                    Flexbox是现代CSS布局的强大工具。本文将深入探讨Flexbox的各种属性和用法，帮助您掌握响应式布局的核心技术。
+                </p>
+                <a href="posts/css-flexbox-guide.html" class="read-more">阅读更多 →</a>
+            </article>
+            
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date">2024年1月5日</span>
+                    <span class="post-category">生活</span>
                 </div>
-                <div class="feature-card">
-                    <h3>易于导航</h3>
-                    <p>清晰的导航结构，方便快速找到所需内容</p>
+                <h2 class="post-title">
+                    <a href="posts/new-year-resolutions.html">2024新年计划</a>
+                </h2>
+                <p class="post-excerpt">
+                    新的一年，新的开始。分享我的2024年目标和计划，包括学习新技术、提升技能、保持健康的生活方式等。
+                </p>
+                <a href="posts/new-year-resolutions.html" class="read-more">阅读更多 →</a>
+            </article>
+            
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date">2023年12月28日</span>
+                    <span class="post-category">技术</span>
                 </div>
-            </div>
+                <h2 class="post-title">
+                    <a href="posts/static-site-generators.html">静态网站生成器对比</a>
+                </h2>
+                <p class="post-excerpt">
+                    对比Jekyll、Hugo、Gatsby等主流静态网站生成器的优缺点，帮助您选择最适合的工具来构建您的博客或网站。
+                </p>
+                <a href="posts/static-site-generators.html" class="read-more">阅读更多 →</a>
+            </article>
         </div>
-    </div>
+    </main>
     
     <footer>
         <div class="container">
-            <p>&copy; 2024 我的网站. 保留所有权利.</p>
+            <p>&copy; 2024 我的博客. 使用 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 托管</p>
         </div>
     </footer>
 </body>

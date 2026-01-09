@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages 入门指南 - 我的博客</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">我的博客</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../about.html">关于</a></li>
+                <li><a href="../archive.html">归档</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <a href="../index.html" class="back-link">← 返回首页</a>
+        
+        <article class="post-content">
+            <div class="post-header">
+                <div class="post-meta">
+                    <span class="post-date">2024年1月15日</span>
+                    <span class="post-category">技术</span>
+                </div>
+                <h1>GitHub Pages 入门指南</h1>
+            </div>
+            
+            <p>GitHub Pages 是 GitHub 提供的免费静态网站托管服务。您可以使用它来托管个人博客、项目文档或任何静态网站。本文将详细介绍如何使用 GitHub Pages。</p>
+            
+            <h2>什么是 GitHub Pages？</h2>
+            <p>GitHub Pages 允许您直接从 GitHub 仓库托管静态网站。它支持 HTML、CSS 和 JavaScript，并且完全免费。您的网站将可以通过 <code>username.github.io</code> 或自定义域名访问。</p>
+            
+            <h2>创建仓库</h2>
+            <p>首先，您需要在 GitHub 上创建一个新仓库。有两种方式：</p>
+            
+            <h3>方式一：用户/组织站点</h3>
+            <p>如果您想创建个人主页或组织主页，仓库名必须是 <code>username.github.io</code> 或 <code>organization.github.io</code>。这种方式下，网站将直接部署在根目录。</p>
+            
+            <h3>方式二：项目站点</h3>
+            <p>对于项目文档或博客，您可以创建任意名称的仓库。然后需要在仓库设置中启用 GitHub Pages，并选择源分支（通常是 <code>main</code> 或 <code>gh-pages</code>）。</p>
+            
+            <h2>上传文件</h2>
+            <p>将您的 HTML、CSS、JavaScript 等静态文件上传到仓库。确保有一个 <code>index.html</code> 文件作为网站的入口页面。</p>
+            
+            <h2>启用 GitHub Pages</h2>
+            <ol>
+                <li>进入您的仓库</li>
+                <li>点击 "Settings"（设置）</li>
+                <li>在左侧菜单中找到 "Pages"</li>
+                <li>在 "Source" 部分选择分支（通常是 <code>main</code>）</li>
+                <li>选择根目录（<code>/</code>）或 <code>/docs</code> 文件夹</li>
+                <li>点击 "Save"（保存）</li>
+            </ol>
+            
+            <h2>访问您的网站</h2>
+            <p>保存设置后，GitHub 会开始构建您的网站。几分钟后，您就可以通过以下地址访问：</p>
+            <ul>
+                <li>用户/组织站点：<code>https://username.github.io</code></li>
+                <li>项目站点：<code>https://username.github.io/repository-name</code></li>
+            </ul>
+            
+            <h2>使用自定义域名</h2>
+            <p>如果您有自己的域名，可以在仓库根目录创建一个 <code>CNAME</code> 文件，内容为您的域名。然后在您的域名 DNS 设置中添加 CNAME 记录指向 <code>username.github.io</code>。</p>
+            
+            <h2>注意事项</h2>
+            <ul>
+                <li>所有文件路径必须使用相对路径，不能使用绝对路径</li>
+                <li>GitHub Pages 只支持静态内容，不支持服务器端脚本（如 PHP）</li>
+                <li>仓库必须是公开的（除非使用 GitHub Pro）</li>
+                <li>每次推送代码后，网站会自动更新（可能需要几分钟）</li>
+            </ul>
+            
+            <h2>总结</h2>
+            <p>GitHub Pages 是一个简单而强大的工具，非常适合托管静态网站。通过本文的指南，您应该能够快速上手并部署自己的网站。如果您有任何问题，欢迎查看 GitHub Pages 的官方文档。</p>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 我的博客. 使用 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 托管</p>
+        </div>
+    </footer>
+</body>
+</html>
+
