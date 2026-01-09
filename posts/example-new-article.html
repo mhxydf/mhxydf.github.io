@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何创建自动更新的博客 - 我的博客</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">我的博客</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../about.html">关于</a></li>
+                <li><a href="../archive.html">归档</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <a href="../index.html" class="back-link">← 返回首页</a>
+        
+        <article class="post-content">
+            <div class="post-header">
+                <div class="post-meta">
+                    <span class="post-date">2024年1月20日</span>
+                    <span class="post-category">技术</span>
+                </div>
+                <h1>如何创建自动更新的博客</h1>
+            </div>
+            
+            <p>在现代Web开发中，静态博客网站越来越受欢迎。它们快速、安全、易于部署。本文将介绍如何创建一个能够自动检测新文章并更新的静态博客系统。</p>
+            
+            <h2>为什么需要自动检测功能？</h2>
+            <p>传统的静态博客需要手动更新每个页面的HTML代码来添加新文章链接。这不仅繁琐，还容易出错。通过使用JSON配置文件和JavaScript动态加载，我们可以实现文章的自动检测和显示。</p>
+            
+            <h2>实现方案</h2>
+            <p>我们的解决方案包含三个核心组件：</p>
+            
+            <h3>1. posts.json 配置文件</h3>
+            <p>这个JSON文件存储了所有文章的元数据，包括标题、文件名、日期、分类和摘要。JavaScript会读取这个文件来动态生成文章列表。</p>
+            
+            <h3>2. update_posts.py 自动更新脚本</h3>
+            <p>这个Python脚本会自动扫描posts文件夹中的所有HTML文件，提取文章的元数据，并更新posts.json文件。您只需要运行这个脚本，就能自动更新文章列表。</p>
+            
+            <h3>3. blog.js 动态加载脚本</h3>
+            <p>这个JavaScript文件在页面加载时读取posts.json，并根据当前页面类型（首页或归档页）动态渲染相应的文章列表。</p>
+            
+            <h2>使用步骤</h2>
+            <ol>
+                <li><strong>创建新文章</strong>：在posts文件夹中创建新的HTML文件，确保包含正确的元数据标签</li>
+                <li><strong>运行更新脚本</strong>：执行 <code>python update_posts.py</code> 来更新文章列表</li>
+                <li><strong>提交更改</strong>：将更新的文件推送到GitHub仓库</li>
+                <li><strong>自动显示</strong>：新文章会自动出现在首页和归档页中</li>
+            </ol>
+            
+            <h2>文章模板结构</h2>
+            <p>创建新文章时，请确保包含以下关键元素：</p>
+            <ul>
+                <li><code>&lt;h1&gt;</code> 标签：文章标题</li>
+                <li><code>&lt;span class="post-date"&gt;</code>：发布日期</li>
+                <li><code>&lt;span class="post-category"&gt;</code>：文章分类</li>
+                <li>文章的第一段：将作为摘要显示在首页</li>
+            </ul>
+            
+            <h2>优势</h2>
+            <p>这种方法的优势包括：</p>
+            <ul>
+                <li><strong>自动化</strong>：无需手动修改HTML代码</li>
+                <li><strong>一致性</strong>：所有文章使用统一的结构</li>
+                <li><strong>易于维护</strong>：只需运行一个脚本即可更新</li>
+                <li><strong>灵活性</strong>：可以轻松添加新功能，如分类筛选、搜索等</li>
+            </ul>
+            
+            <h2>扩展功能</h2>
+            <p>基于这个基础，您还可以添加更多功能：</p>
+            <ul>
+                <li>按分类筛选文章</li>
+                <li>搜索功能</li>
+                <li>标签系统</li>
+                <li>分页功能</li>
+                <li>RSS订阅</li>
+            </ul>
+            
+            <h2>总结</h2>
+            <p>通过使用JSON配置和JavaScript动态加载，我们成功创建了一个能够自动检测和显示新文章的静态博客系统。这种方法既保持了静态网站的性能优势，又提供了动态内容的便利性。无论您是个人博客作者还是技术文档维护者，这个方案都能大大提高您的工作效率。</p>
+            
+            <blockquote>
+                <p>提示：记得在创建新文章后运行更新脚本，这样新文章才能自动出现在网站中。</p>
+            </blockquote>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 我的博客. 使用 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 托管</p>
+        </div>
+    </footer>
+</body>
+</html>
+
