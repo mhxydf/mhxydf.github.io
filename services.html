@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务项目 - 我的网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        nav ul li a.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .page-header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .content {
+            background: white;
+            padding: 60px 20px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 1000px;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .service-card p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .service-card ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        .service-card ul li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="services.html" class="active">服务项目</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="page-header">
+        <div class="container">
+            <h1>服务项目</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <div class="services">
+                <div class="service-card">
+                    <h3>网站开发</h3>
+                    <p>我们提供专业的网站开发服务，包括前端和后端开发，确保您的网站既美观又功能强大。</p>
+                    <ul>
+                        <li>响应式设计</li>
+                        <li>现代化界面</li>
+                        <li>SEO优化</li>
+                        <li>性能优化</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>移动应用开发</h3>
+                    <p>开发iOS和Android原生应用，以及跨平台应用解决方案，让您的业务触达更多用户。</p>
+                    <ul>
+                        <li>iOS应用开发</li>
+                        <li>Android应用开发</li>
+                        <li>跨平台开发</li>
+                        <li>应用维护</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>咨询服务</h3>
+                    <p>提供专业的技术咨询和业务咨询服务，帮助您做出明智的决策，推动业务发展。</p>
+                    <ul>
+                        <li>技术架构咨询</li>
+                        <li>数字化转型</li>
+                        <li>项目管理</li>
+                        <li>培训服务</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>云服务</h3>
+                    <p>提供云基础设施搭建、迁移和管理服务，确保您的业务在云端稳定运行。</p>
+                    <ul>
+                        <li>云架构设计</li>
+                        <li>云迁移服务</li>
+                        <li>云安全</li>
+                        <li>运维支持</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>数据分析</h3>
+                    <p>通过数据分析帮助您深入了解业务，发现机会，优化决策，提升竞争力。</p>
+                    <ul>
+                        <li>数据挖掘</li>
+                        <li>商业智能</li>
+                        <li>数据可视化</li>
+                        <li>预测分析</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>技术支持</h3>
+                    <p>提供7x24小时技术支持服务，快速响应您的问题，确保系统稳定运行。</p>
+                    <ul>
+                        <li>故障排查</li>
+                        <li>系统维护</li>
+                        <li>性能监控</li>
+                        <li>紧急响应</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 我的网站. 保留所有权利.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
